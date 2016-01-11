@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (3.1.4)
+  - Charts (2.1.6)
+  - IQKeyboardManagerSwift (3.3.5)
+  - Reachability (3.2)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Charts
+  - IQKeyboardManagerSwift
+  - Reachability
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
+  Charts: 5e1e5ac23898e5b09d226a2fc3e9d86bc281937e
+  IQKeyboardManagerSwift: 17f1ebf3fe07f7905369c6dca2da1051b6fea805
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

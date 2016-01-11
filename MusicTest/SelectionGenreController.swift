@@ -10,9 +10,9 @@ import UIKit
 import SwiftyJSON
 
 enum Instruments: Int {
-    case Bass = 1
+    case Guitar = 1
     case ElectricGuitar = 2
-    case Guitar = 3
+    case Bass = 3
     case Banjo = 4
     
     func description() -> String {

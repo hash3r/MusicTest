@@ -6,4 +6,9 @@
 //  Copyright © 2016 Vladimir Gnatiuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ResultController: UIViewController {
+    var userName: String?
+    var selectedInstrument: Instruments?
+}

@@ -203,7 +203,7 @@
                                                         </constraints>
                                                         <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
                                                         <connections>
                                                             <outlet property="delegate" destination="BYZ-38-t0r" id="mtD-ms-ZiX"/>
                                                         </connections>
@@ -320,10 +320,39 @@
                                             </mask>
                                         </variation>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Up2-tQ-0m6" customClass="HorizontalBarChartView" customModule="Charts">
+                                        <rect key="frame" x="5" y="110" width="310" height="308"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0py-Yp-zep" userLabel="Legend Chart View" customClass="HorizontalBarChartView" customModule="Charts">
+                                        <rect key="frame" x="35" y="110" width="310" height="308"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBp-3D-k0y">
+                                        <rect key="frame" x="50" y="468" width="220" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="9Dz-Vm-30u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Up2-tQ-0m6" secondAttribute="trailing" constant="5" id="3kS-rx-fSA"/>
+                                    <constraint firstItem="0py-Yp-zep" firstAttribute="height" secondItem="Up2-tQ-0m6" secondAttribute="height" id="W8o-BR-18x"/>
+                                    <constraint firstAttribute="trailing" secondItem="qBp-3D-k0y" secondAttribute="trailing" constant="50" id="WMH-1u-TRO"/>
                                     <constraint firstItem="oSO-zH-gGV" firstAttribute="top" secondItem="Yy6-CN-0JS" secondAttribute="top" constant="60" id="a17-At-CBT"/>
+                                    <constraint firstItem="qBp-3D-k0y" firstAttribute="centerX" secondItem="Yy6-CN-0JS" secondAttribute="centerX" id="a8f-fY-BCy"/>
+                                    <constraint firstItem="qBp-3D-k0y" firstAttribute="leading" secondItem="Yy6-CN-0JS" secondAttribute="leading" constant="50" id="aUx-WV-HRP"/>
+                                    <constraint firstAttribute="bottom" secondItem="qBp-3D-k0y" secondAttribute="bottom" constant="50" id="byy-Qe-dAX"/>
+                                    <constraint firstItem="Up2-tQ-0m6" firstAttribute="leading" secondItem="Yy6-CN-0JS" secondAttribute="leading" constant="5" id="dcF-2D-cnA"/>
+                                    <constraint firstItem="0py-Yp-zep" firstAttribute="centerY" secondItem="Up2-tQ-0m6" secondAttribute="centerY" id="r7L-qI-4PP"/>
+                                    <constraint firstItem="0py-Yp-zep" firstAttribute="centerX" secondItem="Up2-tQ-0m6" secondAttribute="centerX" constant="30" id="rep-3f-vXT"/>
+                                    <constraint firstItem="Up2-tQ-0m6" firstAttribute="top" secondItem="oSO-zH-gGV" secondAttribute="bottom" constant="10" id="sho-xg-RFz"/>
+                                    <constraint firstItem="0py-Yp-zep" firstAttribute="width" secondItem="Up2-tQ-0m6" secondAttribute="width" id="u6B-MK-onL"/>
+                                    <constraint firstItem="qBp-3D-k0y" firstAttribute="top" secondItem="Up2-tQ-0m6" secondAttribute="bottom" constant="50" id="z66-8H-uTe"/>
                                     <constraint firstItem="oSO-zH-gGV" firstAttribute="centerX" secondItem="Yy6-CN-0JS" secondAttribute="centerX" id="zo2-H6-G0o"/>
                                 </constraints>
                             </view>
@@ -340,6 +369,11 @@
                             <constraint firstItem="x1S-bx-l8S" firstAttribute="leading" secondItem="C8d-hY-EkQ" secondAttribute="leading" id="yHy-to-cMR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="Up2-tQ-0m6" id="LC1-Rg-VhC"/>
+                        <outlet property="legendChartView" destination="0py-Yp-zep" id="yO9-2i-jUo"/>
+                        <outlet property="resultLabel" destination="qBp-3D-k0y" id="dlC-2y-uc8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1x4-i5-37i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

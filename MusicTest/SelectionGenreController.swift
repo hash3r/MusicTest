@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 enum Instruments: Int {
     case Bass = 1
@@ -22,6 +23,25 @@ enum Instruments: Int {
         case ElectricGuitar: return "Electric guitar"
         }
     }
+    
+    func jsonValue(json: JSON) -> Double? {
+        switch self {
+        case Guitar: return json["guitar"].double
+        case Banjo: return json["banjo"].double
+        case Bass: return json["bass"].double
+        case ElectricGuitar: return json["electric"].double
+        }
+    }
+    
+    func color() -> UIColor {
+        switch self {
+        case Guitar: return UIColor.orangeColor()
+        case Banjo: return UIColor.greenColor()
+        case Bass: return UIColor.blueColor()
+        case ElectricGuitar: return UIColor.purpleColor()
+        }
+    }
+
 }
 
 class SelectionGenreController: UIViewController, UITextFieldDelegate {
